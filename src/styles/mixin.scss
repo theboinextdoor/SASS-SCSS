@@ -1,0 +1,35 @@
+@use "./partials" as mycolor;
+@use "./partials2" as mycolor2;
+
+@mixin customFunc($color: red){
+    background-color: $color;
+    padding: 1rem 2rem ;
+    border: none;
+    cursor : pointer;
+}
+
+
+.p1 {
+    @include customFunc;     //? here i haven't added any parameter in customFuns so the default color will be added to the paragraph 
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.p2 {
+    @include customFunc(mycolor.$sky);    //? here i have added my own color
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.p3 {
+    @include customFunc(mycolor.$babypink);     //? here i have added my own color
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+

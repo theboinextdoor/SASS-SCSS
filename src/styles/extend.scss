@@ -1,0 +1,18 @@
+@use './partials' as myColor;
+
+.btn {
+    max-width: 800px;
+    background-color: myColor.$babypink;
+
+    button {
+        background-color: myColor.$green;
+        padding: 1rem 2rem;
+        margin: 2rem 5rem;
+        cursor: pointer;
+        border: none;
+    }
+
+    p{
+        @extend button;
+    }
+}

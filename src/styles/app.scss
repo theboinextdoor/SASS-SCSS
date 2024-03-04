@@ -1,0 +1,11 @@
+// @import "./_partials" ;
+
+@use "./partials" as color1;
+@use "./partials2" as color2;
+
+
+body{
+    background-color: color1.$blue;
+    width: color1.$large;
+    font-size: 4rem;
+}
